@@ -1,10 +1,18 @@
-# Skill Integrator (技能整合器)
+# 🔧 Skill Integrator (技能整合器)
 
-> 元技能（meta-skill）—— 专门用来整合、合并、优化其他 skills 的方法论与执行流程。
+<p align="center">
+  <img src="https://img.shields.io/badge/WorkBuddy-Meta--Skill-purple?logo=python" alt="WorkBuddy Skill">
+  <img src="https://img.shields.io/badge/方法论-完整-green" alt="Methodology">
+  <img src="https://img.shields.io/github/license/smiling66652/skill-integrator?color=blue" alt="License">
+</p>
+
+<p align="center">
+  <strong>元技能（meta-skill）—— 专门用来整合、合并、优化其他 skills 的方法论与执行流程</strong>
+</p>
 
 ---
 
-## 核心功能
+## ✨ 核心功能
 
 本 skill 提供一套完整的 skill 整合方法论，包括：
 
@@ -19,7 +27,7 @@
 
 ---
 
-## 使用场景
+## 🎯 使用场景
 
 | 用户输入 | 直接命中 | 说明 |
 |-------------|------------|------|
@@ -30,19 +38,19 @@
 
 ---
 
-## 快速开始
+## 🚀 快速开始
 
 ### Step 1：全量扫描，收集现有 Skills
 
 ```bash
 # 1. 列出所有 skills
-ls "C:/Users/Matebook/.workbuddy/skills/" | sort
+ls "~/.workbuddy/skills/" | sort
 
 # 2. 按关键词搜索相关 skills
-find "C:/Users/Matebook/.workbuddy/skills/" -name "SKILL.md" | xargs grep -l "关键词"
+find "~/.workbuddy/skills/" -name "SKILL.md" | xargs grep -l "关键词"
 
 # 3. 读取每个相关 skill 的 SKILL.md（前 30 行足够判断功能）
-for d in "C:/Users/Matebook/.workbuddy/skills/"*/; do
+for d in "~/.workbuddy/skills/"*/; do
   echo "=== $(basename $d) ==="
   head -30 "$d/SKILL.md" 2>/dev/null
 done
@@ -93,10 +101,10 @@ skill-name/
 
 ```bash
 # 创建归档目录
-mkdir -p "C:/Users/Matebook/.workbuddy/skills/.archived"
+mkdir -p "~/.workbuddy/skills/.archived"
 
 # 移动旧 skills 到归档目录
-mv "C:/Users/Matebook/.workbuddy/skills/old-skill-A" "C:/Users/Matebook/.workbuddy/skills/.archived/"
+mv "~/.workbuddy/skills/old-skill-A" "~/.workbuddy/skills/.archived/"
 ```
 
 ### Step 7：测试验证
@@ -108,28 +116,7 @@ mv "C:/Users/Matebook/.workbuddy/skills/old-skill-A" "C:/Users/Matebook/.workbud
 
 ---
 
-## 示例：整合"联网工具箱"
-
-**背景**：原有 10 个独立 skills（web-access、web-scraper、browser-use、playwright-cli、summarize、tavily、perplexity、multi-search-engine、youtube-watcher、news-summary）
-
-**整合步骤**：
-
-1. **全量扫描**：确认这 10 个 skills 都存在
-2. **横向对比**：制作对比表，找出每个工具的优缺点
-3. **设计三级结构**：
-   - 一级：搜索/抓取/自动化/总结/AI搜索/YouTube/新闻
-   - 二级：智能搜索/网页抓取/Playwright/Agent Browser/Human Browser/总结/AI搜索/YouTube转录/新闻摘要
-   - 三级：具体命令
-4. **编写 SKILL.md**：使用上面的模板
-5. **创建 references/**：把每个工具的详细用法拆到 `references/`
-6. **归档旧 skills**：移动到 `.archived/`
-7. **测试验证**：测试每个功能是否正常工作
-
-**结果**：10 个 skills → 1 个 `联网工具箱`，上下文减少 70%，响应速度提升 2-3 倍。
-
----
-
-## 目录结构
+## 📂 目录结构
 
 ```
 skill-integrator/
@@ -151,20 +138,47 @@ skill-integrator/
 
 ---
 
-## 贡献
+## 💡 示例：整合"联网工具箱"
+
+**背景**：原有 10 个独立 skills（web-access、web-scraper、browser-use、playwright-cli、summarize、tavily、perplexity、multi-search-engine、youtube-watcher、news-summary）
+
+**整合步骤**：
+
+1. **全量扫描**：确认这 10 个 skills 都存在
+2. **横向对比**：制作对比表，找出每个工具的优缺点
+3. **设计三级结构**：
+   - 一级：搜索/抓取/自动化/总结/AI搜索/YouTube/新闻
+   - 二级：智能搜索/网页抓取/Playwright/Agent Browser/总结/AI搜索/YouTube转录/新闻摘要
+   - 三级：具体命令
+4. **编写 SKILL.md**：使用上面的模板
+5. **创建 references/**：把每个工具的详细用法拆到 `references/`
+6. **归档旧 skills**：移动到 `.archived/`
+7. **测试验证**：测试每个功能是否正常工作
+
+**结果**：10 个 skills → 1 个 `联网工具箱`，上下文减少 70%，响应速度提升 2-3 倍。
+
+---
+
+## 🤝 贡献
 
 欢迎提交 Pull Request 来改进本 skill！
 
 ---
 
-## 许可证
+## 📄 许可证
 
 MIT License
 
 ---
 
-## 更新记录
+## 📝 更新记录
 
 | 版本 | 日期 | 更新内容 |
 |------|------|----------|
 | 1.0.0 | 2026-06-02 | 初始版本，基于用户工作原则生成 |
+
+---
+
+<div align="center">
+  <sub>为 WorkBuddy 生态构建 — 让 AI Skills 真正有序、高效</sub>
+</div>
